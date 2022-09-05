@@ -8,6 +8,7 @@
     <App id="app" busy="{AppView>/Busy}">
         <f:FlexibleColumnLayout 
             id="layout"
+            
             layout="{AppView>/Layout}"
             backgroundDesign="Translucent"/>
     </App>
