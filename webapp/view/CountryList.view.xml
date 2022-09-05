@@ -1,0 +1,51 @@
+<mvc:View 
+    displayBlock="true"
+    height="100%"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.f.semantic"
+    controllerName="custom.custom.controller.CountryList"
+    >
+    <semantic:SemanticPage
+        id="listPage"
+        preserveHeaderStateOnScroll="true"
+        toggleHeaderOnTitleClick="false">
+        <semantic:titleHeading>
+            <Title
+                id="listPageTitle"
+                text="{i18n>title}"
+                level="H2"/>
+        </semantic:titleHeading>
+        <semantic:content>
+            <!-- For client side filtering add this to the items attribute: parameters: {operationMode: 'Client'}}" -->
+            <Panel>
+                <Button text="Hello" press=".onPress"/>
+                <Input 
+                    showValueHelp="true"
+                    valueHelpRequest=".showValueHelp"/>
+                <List
+                    id="list"
+                    width="auto"
+                    class="sapFDynamicPageAlignContent"
+                    items="{
+                        path: 'AppData>/companies',
+                        sorter: {
+                            path: 'AppData>county',
+                            descending: false,
+                            group: '.getCounty'
+                        },
+                        groupHeaderFactory: '.getGroupHeader'
+                    }"
+                    noDataText="No data"
+                    growing="true">
+                    <items>
+                        <StandardListItem
+                            type="Navigation"
+                            title="{AppData>name}"
+                            description="{AppData>city}" />
+                    </items>
+                </List>
+            </Panel>
+        </semantic:content>
+    </semantic:SemanticPage>
+</mvc:View>

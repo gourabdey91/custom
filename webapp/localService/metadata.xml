@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZHCM_EXPENSE_CLAIM_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ExpenseDetail" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Claim"/>
+                </Key>
+                <Property Name="Claim" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Claim No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Connection1" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Truth Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Connection2" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Truth Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Guid" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="GUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TypeDesc" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="Claim Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Approval status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StatusState" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Object State" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="StatusText" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="Short Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Claim Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Employee" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Personnel No." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EmployeeName" Type="Edm.String" Nullable="false" MaxLength="70" sap:unicode="false" sap:label="First and last name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zdate" Type="Edm.DateTime" Precision="8" sap:unicode="false" sap:label="Claim Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zmonth" Type="Edm.DateTime" Precision="8" sap:unicode="false" sap:label="Year and month" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zquater" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zyear" Type="Edm.DateTime" Precision="8" sap:unicode="false" sap:label="Year" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BrdbndConn" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Broadband Connection" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Note" Type="Edm.String" Nullable="false" MaxLength="254" sap:unicode="false" sap:label="Comment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AmountExp" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:unit="Currency" sap:label="Expense Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AmountPayl" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:unit="Currency" sap:label="Payable Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Currency Key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+                <Property Name="FromWf" Type="Edm.Boolean" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DateCr" Type="Edm.DateTime" Precision="8" sap:unicode="false" sap:label="Creation Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TimeCr" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Creation Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UserCr" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Created By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="Amount" Relationship="ZHCM_EXPENSE_CLAIM_SRV.ExpenseAmount" FromRole="FromRole_ExpenseAmount" ToRole="ToRole_ExpenseAmount"/>
+                <NavigationProperty Name="Billing" Relationship="ZHCM_EXPENSE_CLAIM_SRV.Billing" FromRole="FromRole_Billing" ToRole="ToRole_Billing"/>
+                <NavigationProperty Name="OT" Relationship="ZHCM_EXPENSE_CLAIM_SRV.OT" FromRole="FromRole_OT" ToRole="ToRole_OT"/>
+                <NavigationProperty Name="OTStr" Relationship="ZHCM_EXPENSE_CLAIM_SRV.OTStr" FromRole="FromRole_OTStr" ToRole="ToRole_OTStr"/>
+                <NavigationProperty Name="Attach" Relationship="ZHCM_EXPENSE_CLAIM_SRV.Att" FromRole="FromRole_Att" ToRole="ToRole_Att"/>
+                <NavigationProperty Name="ClaimAprv" Relationship="ZHCM_EXPENSE_CLAIM_SRV.ClaimApprv" FromRole="FromRole_ClaimApprv" ToRole="ToRole_ClaimApprv"/>
+                <NavigationProperty Name="ClaimFormDown" Relationship="ZHCM_EXPENSE_CLAIM_SRV.ClaimFormAssoc" FromRole="FromRole_ClaimFormAssoc" ToRole="ToRole_ClaimFormAssoc"/>
+            </EntityType>
+            <EntityType Name="ClaimTypes" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Type"/>
+                </Key>
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Claim Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="BillDetails" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Claim"/>
+                    <PropertyRef Name="LineItem"/>
+                </Key>
+                <Property Name="Claim" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Claim No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LineItem" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Line Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Perticular" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="Perticular" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BillDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Posted on Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Amount" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BillNo" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Bill Number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Currency Key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+            </EntityType>
+            <EntityType Name="FieldControl" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Type"/>
+                </Key>
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Claim Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Approver" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Download" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Truth Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Withdraw" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Claim" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Claim No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Entilement" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Truth Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Remark" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Connection1" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Connection2" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Usages" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Rent" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Total" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gst" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="GrandTotal" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zyear" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zquater" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zmonth" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zdate" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AmountPayableV" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ExpenseAmountV" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ottable" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Billtable" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Amttable" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotalEditable" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AmountPayable" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="2" sap:unicode="false" sap:unit="Currency" sap:label="Payable Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Attachment" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Currency Key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+                <NavigationProperty Name="Aprv" Relationship="ZHCM_EXPENSE_CLAIM_SRV.Approver" FromRole="FromRole_Approver" ToRole="ToRole_Approver"/>
+            </EntityType>
+            <EntityType Name="Amounts" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Claim"/>
+                    <PropertyRef Name="Type"/>
+                </Key>
+                <Property Name="Claim" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Claim No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Amount Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Connection1" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Connection2" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Broadband" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TypeDesc" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="Short Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Currency Key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+            </EntityType>
+            <EntityType Name="OverTime" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Claim"/>
+                </Key>
+                <Property Name="Claim" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Claim No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LineItem" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Line Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="OtDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Claim Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="OtHours" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="Hours" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="OverTimeString" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Claim"/>
+                    <PropertyRef Name="LineItem"/>
+                </Key>
+                <Property Name="Claim" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Claim No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LineItem" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Line Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="OtDate" Type="Edm.String" Nullable="false" MaxLength="11" sap:unicode="false" sap:label="Data Element Length 11" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="OtHours" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:label="Hours" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Attachment" m:HasStream="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Claim"/>
+                    <PropertyRef Name="LineItem"/>
+                </Key>
+                <Property Name="Claim" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Claim No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="LineItem" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Line Item" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="File Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MimeType" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="MIME Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FileSize" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Size/dim." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AttachmentValue" Type="Edm.Binary" sap:unicode="false" sap:label="Binary Content" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="GetNextClaim" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ClaimGUID"/>
+                </Key>
+                <Property Name="ClaimGUID" Type="Edm.Guid" Nullable="false" sap:unicode="false" sap:label="UUID" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Agent" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Type"/>
+                    <PropertyRef Name="AprvLevel"/>
+                </Key>
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Claim Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AprvLevel" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Approval Level" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Empl./appl.name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ClaimApprover" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Claim"/>
+                    <PropertyRef Name="AprvLevel"/>
+                </Key>
+                <Property Name="Claim" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Claim No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DateAprv" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Approval date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AprvLevel" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Approval Level" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TimeAprv" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Approval Time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Employee" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Personnel No." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UserAprv" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Approved By" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Approver" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Empl./appl.name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="AprvComment" Type="Edm.String" Nullable="false" MaxLength="254" sap:unicode="false" sap:label="Comment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Entitlement" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Type"/>
+                    <PropertyRef Name="Date"/>
+                </Key>
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Claim Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Date" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Claim Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TotalAmount" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Consumed" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Balance" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Currency Key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+            </EntityType>
+            <EntityType Name="EntitlementSummary" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Type"/>
+                </Key>
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Claim Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Amount" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:unit="Currency" sap:label="Payable Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Consumed" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Balance" Type="Edm.Decimal" Nullable="false" Precision="16" Scale="3" sap:unicode="false" sap:unit="Currency" sap:label="Amount" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Currency" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Currency Key" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="currency-code"/>
+            </EntityType>
+            <EntityType Name="ClaimForm" m:HasStream="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Claim"/>
+                </Key>
+                <Property Name="Claim" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Claim No" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="File Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MimeType" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="MIME Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FileSize" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Size/dim." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Attachment" Type="Edm.Binary" Nullable="false" sap:unicode="false" sap:label="Binary Content" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <Association Name="Approver" sap:content-version="1">
+                <End Type="ZHCM_EXPENSE_CLAIM_SRV.FieldControl" Multiplicity="0..1" Role="FromRole_Approver"/>
+                <End Type="ZHCM_EXPENSE_CLAIM_SRV.Agent" Multiplicity="*" Role="ToRole_Approver"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Approver">
+                        <PropertyRef Name="Type"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Approver">
+                        <PropertyRef Name="Type"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Billing" sap:content-version="1">
+                <End Type="ZHCM_EXPENSE_CLAIM_SRV.ExpenseDetail" Multiplicity="1" Role="FromRole_Billing"/>
+                <End Type="ZHCM_EXPENSE_CLAIM_SRV.BillDetails" Multiplicity="*" Role="ToRole_Billing"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Billing">
+                        <PropertyRef Name="Claim"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Billing">
+                        <PropertyRef Name="Claim"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="OT" sap:content-version="1">
+                <End Type="ZHCM_EXPENSE_CLAIM_SRV.ExpenseDetail" Multiplicity="1" Role="FromRole_OT"/>
+                <End Type="ZHCM_EXPENSE_CLAIM_SRV.OverTime" Multiplicity="*" Role="ToRole_OT"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_OT">
+                        <PropertyRef Name="Claim"/>
+                    </Principal>
+                    <Dependent Role="ToRole_OT">
+                        <PropertyRef Name="Claim"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="OTStr" sap:content-version="1">
+                <End Type="ZHCM_EXPENSE_CLAIM_SRV.ExpenseDetail" Multiplicity="1" Role="FromRole_OTStr"/>
+                <End Type="ZHCM_EXPENSE_CLAIM_SRV.OverTimeString" Multiplicity="*" Role="ToRole_OTStr"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_OTStr">
+                        <PropertyRef Name="Claim"/>
+                    </Principal>
+                    <Dependent Role="ToRole_OTStr">
+                        <PropertyRef Name="Claim"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="Att" sap:content-version="1">
+                <End Type="ZHCM_EXPENSE_CLAIM_SRV.ExpenseDetail" Multiplicity="0..1" Role="FromRole_Att"/>
+                <End Type="ZHCM_EXPENSE_CLAIM_SRV.Attachment" Multiplicity="*" Role="ToRole_Att"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Att">
+                        <PropertyRef Name="Claim"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Att">
+                        <PropertyRef Name="Claim"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ClaimApprv" sap:content-version="1">
+                <End Type="ZHCM_EXPENSE_CLAIM_SRV.ExpenseDetail" Multiplicity="0..1" Role="FromRole_ClaimApprv"/>
+                <End Type="ZHCM_EXPENSE_CLAIM_SRV.ClaimApprover" Multiplicity="*" Role="ToRole_ClaimApprv"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ClaimApprv">
+                        <PropertyRef Name="Claim"/>
+                    </Principal>
+                    <Dependent Role="ToRole_ClaimApprv">
+                        <PropertyRef Name="Claim"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ClaimFormAssoc" sap:content-version="1">
+                <End Type="ZHCM_EXPENSE_CLAIM_SRV.ExpenseDetail" Multiplicity="0..1" Role="FromRole_ClaimFormAssoc"/>
+                <End Type="ZHCM_EXPENSE_CLAIM_SRV.ClaimForm" Multiplicity="0..1" Role="ToRole_ClaimFormAssoc"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ClaimFormAssoc">
+                        <PropertyRef Name="Claim"/>
+                    </Principal>
+                    <Dependent Role="ToRole_ClaimFormAssoc">
+                        <PropertyRef Name="Claim"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ExpenseAmount" sap:content-version="1">
+                <End Type="ZHCM_EXPENSE_CLAIM_SRV.ExpenseDetail" Multiplicity="1" Role="FromRole_ExpenseAmount"/>
+                <End Type="ZHCM_EXPENSE_CLAIM_SRV.Amounts" Multiplicity="*" Role="ToRole_ExpenseAmount"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_ExpenseAmount">
+                        <PropertyRef Name="Claim"/>
+                    </Principal>
+                    <Dependent Role="ToRole_ExpenseAmount">
+                        <PropertyRef Name="Claim"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZHCM_EXPENSE_CLAIM_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ExpenseDetailSet" EntityType="ZHCM_EXPENSE_CLAIM_SRV.ExpenseDetail" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ClaimTypesSet" EntityType="ZHCM_EXPENSE_CLAIM_SRV.ClaimTypes" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="BillDetailsSet" EntityType="ZHCM_EXPENSE_CLAIM_SRV.BillDetails" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="FieldControlSet" EntityType="ZHCM_EXPENSE_CLAIM_SRV.FieldControl" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="AmountsSet" EntityType="ZHCM_EXPENSE_CLAIM_SRV.Amounts" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="OverTimeSet" EntityType="ZHCM_EXPENSE_CLAIM_SRV.OverTime" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="OverTimeStringSet" EntityType="ZHCM_EXPENSE_CLAIM_SRV.OverTimeString" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="AttachmentSet" EntityType="ZHCM_EXPENSE_CLAIM_SRV.Attachment" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="GetNextClaimSet" EntityType="ZHCM_EXPENSE_CLAIM_SRV.GetNextClaim" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="AgentSet" EntityType="ZHCM_EXPENSE_CLAIM_SRV.Agent" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ClaimApproverSet" EntityType="ZHCM_EXPENSE_CLAIM_SRV.ClaimApprover" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="EntitlementSet" EntityType="ZHCM_EXPENSE_CLAIM_SRV.Entitlement" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="EntitlementSummarySet" EntityType="ZHCM_EXPENSE_CLAIM_SRV.EntitlementSummary" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="ClaimFormSet" EntityType="ZHCM_EXPENSE_CLAIM_SRV.ClaimForm" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <AssociationSet Name="OTSet" Association="ZHCM_EXPENSE_CLAIM_SRV.OT" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ExpenseDetailSet" Role="FromRole_OT"/>
+                    <End EntitySet="OverTimeSet" Role="ToRole_OT"/>
+                </AssociationSet>
+                <AssociationSet Name="ClaimFormAssocSet" Association="ZHCM_EXPENSE_CLAIM_SRV.ClaimFormAssoc" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ExpenseDetailSet" Role="FromRole_ClaimFormAssoc"/>
+                    <End EntitySet="ClaimFormSet" Role="ToRole_ClaimFormAssoc"/>
+                </AssociationSet>
+                <AssociationSet Name="ClaimApprvSet" Association="ZHCM_EXPENSE_CLAIM_SRV.ClaimApprv" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ExpenseDetailSet" Role="FromRole_ClaimApprv"/>
+                    <End EntitySet="ClaimApproverSet" Role="ToRole_ClaimApprv"/>
+                </AssociationSet>
+                <AssociationSet Name="AttSet" Association="ZHCM_EXPENSE_CLAIM_SRV.Att" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ExpenseDetailSet" Role="FromRole_Att"/>
+                    <End EntitySet="AttachmentSet" Role="ToRole_Att"/>
+                </AssociationSet>
+                <AssociationSet Name="ExpenseAmountSet" Association="ZHCM_EXPENSE_CLAIM_SRV.ExpenseAmount" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ExpenseDetailSet" Role="FromRole_ExpenseAmount"/>
+                    <End EntitySet="AmountsSet" Role="ToRole_ExpenseAmount"/>
+                </AssociationSet>
+                <AssociationSet Name="OTStrSet" Association="ZHCM_EXPENSE_CLAIM_SRV.OTStr" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ExpenseDetailSet" Role="FromRole_OTStr"/>
+                    <End EntitySet="OverTimeStringSet" Role="ToRole_OTStr"/>
+                </AssociationSet>
+                <AssociationSet Name="ApproverSet" Association="ZHCM_EXPENSE_CLAIM_SRV.Approver" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="FieldControlSet" Role="FromRole_Approver"/>
+                    <End EntitySet="AgentSet" Role="ToRole_Approver"/>
+                </AssociationSet>
+                <AssociationSet Name="BillingSet" Association="ZHCM_EXPENSE_CLAIM_SRV.Billing" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ExpenseDetailSet" Role="FromRole_Billing"/>
+                    <End EntitySet="BillDetailsSet" Role="ToRole_Billing"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="http://hdevappdb:8001/sap/opu/odata/sap/ZHCM_EXPENSE_CLAIM_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://hdevappdb:8001/sap/opu/odata/sap/ZHCM_EXPENSE_CLAIM_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

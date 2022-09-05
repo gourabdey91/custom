@@ -1,0 +1,18 @@
+<mvc:View 
+    displayBlock="true"
+    height="100%"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.f.semantic"
+    controllerName="custom.custom.controller.Detail"
+    >
+    <semantic:SemanticPage
+        id="detailPage"
+        >
+        <semantic:titleHeading>
+            <Title
+                text="{Claim}"
+                level="H2"/>
+        </semantic:titleHeading>
+    </semantic:SemanticPage>
+</mvc:View>
